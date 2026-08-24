@@ -1,0 +1,7 @@
+<mujoco>
+    <asset>
+        <texture name="motphys-ground" type="2d" file="../../../common/motphys-ground.png" />
+        <material name="motphys-ground" texture="motphys-ground" texuniform="true"
+            texrepeat="0.4 0.4" />
+    </asset>
+</mujoco>

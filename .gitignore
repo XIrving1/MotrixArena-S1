@@ -1,0 +1,17 @@
+__pycache__
+runs
+.pdm-python
+logs
+.idea
+.claude
+.venv
+node_modules
+docs/build
+docs/source/user_guide
+docs/source/index.md
+.pytest_cache
+*.log
+
+# MotrixArena S1: 大体积、可再生的训练产物（权重、eval 输出）。
+# 精选的 tfevents 与 sha256 校验和在 docs/section01/ 下，是纳入版本管理的。
+artifacts/MotrixLabold/

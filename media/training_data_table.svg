@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1300" viewBox="0 0 2400 1300">
+  <rect width="2400" height="1300" fill="#ffffff"/>
+  <text x="40" y="58" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="34" font-weight="700" fill="#172b4d">导航与基础修复实验</text>
+
+  <g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="28">
+    <rect x="0" y="90" width="2400" height="72" fill="#1f4e78"/>
+    <g fill="#ffffff" font-weight="700" dominant-baseline="middle">
+      <text x="60" y="126">ID</text>
+      <text x="180" y="126">单次改动</text>
+      <text x="680" y="126" text-anchor="middle">seed</text>
+      <text x="830" y="126" text-anchor="middle">timesteps</text>
+      <text x="1000" y="126" text-anchor="middle">success</text>
+      <text x="1150" y="126" text-anchor="middle">trunc</text>
+      <text x="1335" y="126" text-anchor="middle">Y p50/max</text>
+      <text x="1555" y="126" text-anchor="middle">完赛 p50</text>
+      <text x="1780" y="126">主要失败区</text>
+    </g>
+
+    <g stroke="#cbd5e1" stroke-width="2" fill="none">
+      <path d="M0 90H2400 M0 162H2400 M0 226H2400 M0 290H2400 M0 354H2400 M0 418H2400 M0 482H2400 M0 546H2400 M0 610H2400 M0 674H2400 M0 738H2400 M0 802H2400 M0 866H2400 M0 930H2400 M0 994H2400 M0 1058H2400 M0 1122H2400 M0 1186H2400 M0 1250H2400"/>
+      <path d="M0 90V1250 M120 90V1250 M580 90V1250 M750 90V1250 M910 90V1250 M1070 90V1250 M1230 90V1250 M1440 90V1250 M1670 90V1250 M2400 90V1250"/>
+    </g>
+
+    <g fill="#f8fafc">
+      <rect x="0" y="162" width="2400" height="64"/>
+      <rect x="0" y="290" width="2400" height="64"/>
+      <rect x="0" y="418" width="2400" height="64"/>
+      <rect x="0" y="546" width="2400" height="64"/>
+      <rect x="0" y="674" width="2400" height="64"/>
+      <rect x="0" y="802" width="2400" height="64"/>
+      <rect x="0" y="930" width="2400" height="64"/>
+      <rect x="0" y="1058" width="2400" height="64"/>
+      <rect x="0" y="1186" width="2400" height="64"/>
+    </g>
+
+    <g fill="#172b4d" dominant-baseline="middle">
+      <text x="60" y="194">B0</text><text x="180" y="194">原始基线</text><text x="680" y="194" text-anchor="middle">42</text><text x="830" y="194" text-anchor="middle">15k</text><text x="1000" y="194" text-anchor="middle">0.00%</text><text x="1150" y="194" text-anchor="middle">81.25%</text><text x="1335" y="194" text-anchor="middle">6.307/6.802</text><text x="1555" y="194" text-anchor="middle">—</text><text x="1780" y="194">坡道 78.12%</text>
+      <text x="60" y="258">B1</text><text x="180" y="258">诊断埋点与日志间隔拆分</text><text x="680" y="258" text-anchor="middle">42</text><text x="830" y="258" text-anchor="middle">15k</text><text x="1000" y="258" text-anchor="middle">0.00%</text><text x="1150" y="258" text-anchor="middle">69.53%</text><text x="1335" y="258" text-anchor="middle">3.943/4.439</text><text x="1555" y="258" text-anchor="middle">—</text><text x="1780" y="258">坡道 62.11%</text>
+      <text x="60" y="322">A1</text><text x="180" y="322">修终止覆盖</text><text x="680" y="322" text-anchor="middle">42</text><text x="830" y="322" text-anchor="middle">15k</text><text x="1000" y="322" text-anchor="middle" font-weight="700">89.06%</text><text x="1150" y="322" text-anchor="middle">0.39%</text><text x="1335" y="322" text-anchor="middle">7.356/7.385</text><text x="1555" y="322" text-anchor="middle">14.880 s</text><text x="1780" y="322">崎岖 8.59%</text>
+      <text x="60" y="386">A5</text><text x="180" y="386">训练延长到 45k</text><text x="680" y="386" text-anchor="middle">42</text><text x="830" y="386" text-anchor="middle">45k</text><text x="1000" y="386" text-anchor="middle" font-weight="700">94.92%</text><text x="1150" y="386" text-anchor="middle">0.00%</text><text x="1335" y="386" text-anchor="middle">7.354/7.364</text><text x="1555" y="386" text-anchor="middle">16.900 s</text><text x="1780" y="386">崎岖 5.08%</text>
+      <text x="60" y="450">A2</text><text x="180" y="450">修腿部死奖励</text><text x="680" y="450" text-anchor="middle">42</text><text x="830" y="450" text-anchor="middle">45k</text><text x="1000" y="450" text-anchor="middle">87.11%</text><text x="1150" y="450" text-anchor="middle">1.56%</text><text x="1335" y="450" text-anchor="middle">7.354/7.364</text><text x="1555" y="450" text-anchor="middle">16.600 s</text><text x="1780" y="450">崎岖 10.16%</text>
+      <text x="60" y="514">A6</text><text x="180" y="514">dof_acc 降权</text><text x="680" y="514" text-anchor="middle">42</text><text x="830" y="514" text-anchor="middle">45k</text><text x="1000" y="514" text-anchor="middle">89.45%</text><text x="1150" y="514" text-anchor="middle">0.39%</text><text x="1335" y="514" text-anchor="middle">7.355/7.365</text><text x="1555" y="514" text-anchor="middle">17.280 s</text><text x="1780" y="514">崎岖 8.98%</text>
+      <text x="60" y="578">A7</text><text x="180" y="578">修存活奖励</text><text x="680" y="578" text-anchor="middle">42</text><text x="830" y="578" text-anchor="middle">45k</text><text x="1000" y="578" text-anchor="middle">90.62%</text><text x="1150" y="578" text-anchor="middle">0.00%</text><text x="1335" y="578" text-anchor="middle">7.361/7.380</text><text x="1555" y="578" text-anchor="middle">14.735 s</text><text x="1780" y="578">崎岖 7.81%</text>
+      <text x="60" y="642">A8</text><text x="180" y="642">修坡道奖励与姿态冲突</text><text x="680" y="642" text-anchor="middle">42</text><text x="830" y="642" text-anchor="middle">45k</text><text x="1000" y="642" text-anchor="middle">92.19%</text><text x="1150" y="642" text-anchor="middle">0.00%</text><text x="1335" y="642" text-anchor="middle">7.358/7.406</text><text x="1555" y="642" text-anchor="middle">14.985 s</text><text x="1780" y="642">崎岖 6.64%</text>
+      <text x="60" y="706">A9</text><text x="180" y="706">真实 hfield 观测</text><text x="680" y="706" text-anchor="middle">42</text><text x="830" y="706" text-anchor="middle">45k</text><text x="1000" y="706" text-anchor="middle">82.42%</text><text x="1150" y="706" text-anchor="middle">2.34%</text><text x="1335" y="706" text-anchor="middle">7.356/7.369</text><text x="1555" y="706" text-anchor="middle">15.620 s</text><text x="1780" y="706">崎岖 16.41%</text>
+      <text x="12" y="770" font-size="22">A3/C1</text><text x="180" y="770">A9 基线 + γ=0.995</text><text x="680" y="770" text-anchor="middle">42</text><text x="830" y="770" text-anchor="middle">45k</text><text x="1000" y="770" text-anchor="middle" font-weight="700">96.09%</text><text x="1150" y="770" text-anchor="middle">0.00%</text><text x="1335" y="770" text-anchor="middle">7.355/7.378</text><text x="1555" y="770" text-anchor="middle">15.705 s</text><text x="1780" y="770">崎岖 3.91%</text>
+      <text x="60" y="834">A4</text><text x="180" y="834">A9 基线 + γ=0.998</text><text x="680" y="834" text-anchor="middle">42</text><text x="830" y="834" text-anchor="middle">45k</text><text x="1000" y="834" text-anchor="middle">88.67%</text><text x="1150" y="834" text-anchor="middle">0.00%</text><text x="1335" y="834" text-anchor="middle">7.376/7.431</text><text x="1555" y="834" text-anchor="middle">19.090 s</text><text x="1780" y="834">崎岖 8.59%</text>
+      <text x="60" y="898">C2</text><text x="180" y="898">C 组合</text><text x="680" y="898" text-anchor="middle">43</text><text x="830" y="898" text-anchor="middle">45k</text><text x="1000" y="898" text-anchor="middle">94.92%</text><text x="1150" y="898" text-anchor="middle">0.00%</text><text x="1335" y="898" text-anchor="middle">7.354/7.364</text><text x="1555" y="898" text-anchor="middle">15.230 s</text><text x="1780" y="898">崎岖 5.08%</text>
+      <text x="60" y="962">C3</text><text x="180" y="962">C 组合</text><text x="680" y="962" text-anchor="middle">44</text><text x="830" y="962" text-anchor="middle">45k</text><text x="1000" y="962" text-anchor="middle">90.62%</text><text x="1150" y="962" text-anchor="middle">0.00%</text><text x="1335" y="962" text-anchor="middle">7.363/7.393</text><text x="1555" y="962" text-anchor="middle">15.800 s</text><text x="1780" y="962">崎岖 6.25%、落差 3.12%</text>
+      <text x="60" y="1026">D1</text><text x="180" y="1026">排除 A9 的组合</text><text x="680" y="1026" text-anchor="middle">42</text><text x="830" y="1026" text-anchor="middle">45k</text><text x="1000" y="1026" text-anchor="middle">92.97%</text><text x="1150" y="1026" text-anchor="middle">0.39%</text><text x="1335" y="1026" text-anchor="middle">7.368/7.429</text><text x="1555" y="1026" text-anchor="middle">16.420 s</text><text x="1780" y="1026">崎岖 5.47%</text>
+      <text x="60" y="1090">D2</text><text x="180" y="1090">排除 A9 的组合</text><text x="680" y="1090" text-anchor="middle">43</text><text x="830" y="1090" text-anchor="middle">45k</text><text x="1000" y="1090" text-anchor="middle">91.80%</text><text x="1150" y="1090" text-anchor="middle">0.78%</text><text x="1335" y="1090" text-anchor="middle">7.357/7.396</text><text x="1555" y="1090" text-anchor="middle">16.510 s</text><text x="1780" y="1090">崎岖 7.03%</text>
+      <text x="60" y="1154">D3</text><text x="180" y="1154">排除 A9 的组合</text><text x="680" y="1154" text-anchor="middle">44</text><text x="830" y="1154" text-anchor="middle">45k</text><text x="1000" y="1154" text-anchor="middle">92.19%</text><text x="1150" y="1154" text-anchor="middle">0.39%</text><text x="1335" y="1154" text-anchor="middle">7.357/7.499</text><text x="1555" y="1154" text-anchor="middle">16.920 s</text><text x="1780" y="1154">崎岖 7.03%</text>
+    </g>
+  </g>
+</svg>

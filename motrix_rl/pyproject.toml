@@ -1,0 +1,31 @@
+[build-system]
+requires = ["uv_build>=0.9.6,<0.10.0"]
+build-backend = "uv_build"
+
+[project]
+name = "motrix-rl"
+version = "0.1.0"
+description = "Reinforcement learning training framework based on SKRL with multi-backend unified training interface."
+authors = [{ name = "Motphys", email = "developers@motphys.com" }]
+requires-python = "==3.10.*"
+readme = "README.md"
+license = "Apache-2.0"
+dependencies = ["gymnasium===1.1.1", "python-abc>=0.2.0", "motrix-envs"]
+
+[project.optional-dependencies]
+skrl-jax = [
+    "skrl===1.4.3; sys_platform == 'linux'",
+    "jax[cuda12]==0.4.34; sys_platform == 'linux'",
+    "flax===0.10.4; sys_platform == 'linux'",
+    "tensorflow===2.20.0; sys_platform == 'linux'",
+]
+skrl-torch = [
+    "skrl===1.4.3",
+    "torch===2.7.0+cu128",
+    "torchvision===v0.22.0+cu128",
+    "torchaudio===2.7.0+cu128",
+]
+test = ["pytest~=8.3.3"]
+
+[tool.uv.sources]
+motrix-envs = { workspace = true }

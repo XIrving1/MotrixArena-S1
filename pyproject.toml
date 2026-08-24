@@ -1,0 +1,38 @@
+[project]
+name = "motrix-lab"
+version = "0.1.0"
+description = "A general-purpose machine learning architecture designed for robot training"
+authors = [{ name = "Motphys", email = "developers@motphys.com" }]
+requires-python = "==3.10.*"
+
+[project.optional-dependencies]
+docs = [
+    "sphinx",
+    "autodocsumm",
+    "pydata-sphinx-theme",
+    "myst-parser",
+    "sphinx-copybutton",
+    "sphinx-subfigure",
+    "sphinxcontrib-video",
+    "sphinx-togglebutton",
+    "sphinx-design",
+]
+
+[tool.uv.workspace]
+members = ["motrix_envs", "motrix_rl"]
+
+[tool.uv]
+package = false
+
+# for ReadtheDocs
+[tool.setuptools]
+packages = ["motrix_envs", "motrix_rl"]
+
+[tool.pytest.ini_options]
+# 不加 testpaths 的话 `uv run pytest` 会收走 scripts/test_all_demos.py
+# （它匹配 test_*.py 但里面没有测试，只是个 subprocess 驱动器）。
+testpaths = ["motrix_envs/tests", "motrix_rl/tests"]
+addopts = "-q --strict-markers"
+markers = [
+    "slow: 需要构建 section01 场景（约 10 秒，265MB 网格）",
+]

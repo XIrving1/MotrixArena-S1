@@ -1,0 +1,57 @@
+{
+  "checkpoint": "runs/vbot_navigation_section01/26-08-18_17-52-45-730235_PPO/checkpoints/agent_45000.pt",
+  "env": "vbot_navigation_section01",
+  "num_envs": 256,
+  "seed": 42,
+  "step_limit": 4000,
+  "success_rate": 0.9492,
+  "max_waypoint_reached": {
+    "mean": 5.7422,
+    "p50": 6.0,
+    "p95": 6.0,
+    "max": 6.0,
+    "min": 0.0
+  },
+  "final_y": {
+    "mean": 6.9759,
+    "p50": 7.3554,
+    "p95": 7.3795,
+    "max": 7.4351,
+    "min": -1.3684
+  },
+  "max_y": {
+    "mean": 6.9759,
+    "p50": 7.3554,
+    "p95": 7.3795,
+    "max": 7.4351,
+    "min": -1.3684
+  },
+  "time_to_finish_s": {
+    "mean": 14.9353,
+    "p50": 14.85,
+    "p95": 16.162,
+    "max": 17.54,
+    "min": 13.18
+  },
+  "episode_len_steps": {
+    "mean": 1433.6914,
+    "p50": 1482.5,
+    "p95": 1611.0,
+    "max": 1754.0,
+    "min": 103.0,
+    "frac_truncated": 0.0
+  },
+  "failure_zone_hist": {
+    "start_platform Y<-1.5": 0.0,
+    "rough_hfield -1.5..1.5": 0.043,
+    "drop_lip 1.5..2.0": 0.0078,
+    "ramp 2.0..6.83": 0.0,
+    "finish_platform >6.83": 0.9492
+  },
+  "death_by": {
+    "termination": 0.0508,
+    "truncation": 0.0,
+    "goal_done": 0.9492
+  },
+  "eval_wall_clock_s": 40.7
+}

@@ -1,0 +1,83 @@
+<mujoco model="air4a">
+  <compiler angle="radian" meshdir="meshes"/>
+  <option gravity="0 0 -9.8" timestep="0.001"/>
+  <asset>
+    <mesh name="base_link" file="base_link.STL"/>
+    <mesh name="Link1" file="Link1.STL"/>
+    <mesh name="Link2" file="Link2.STL"/>
+    <mesh name="Link3" file="Link3.STL"/>
+    <mesh name="Link4" file="Link4.STL"/>
+    <mesh name="Link5" file="Link5.STL"/>
+    <mesh name="Link6" file="Link6.STL"/>
+    <texture name="motphys-ground" type="2d" file="../../common/motphys-ground.png" />
+    <material name="motphys-ground" texture="motphys-ground" texuniform="true" texrepeat="0.4 0.4" />
+  </asset>
+
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+    <global elevation="-10"/>
+  </visual>
+
+  <default>
+    <position kp="20000" kv="200" inheritrange="1"/>
+    <geom friction="0 0 0" contype="2" hard="true" solref="0.8 0"/>
+
+    <default class="visual">
+      <geom contype="0" conaffinity="0"/>
+    </default>
+  </default>
+
+  <worldbody>
+    <light pos="0 0 1.5" dir="0 0 -1" directional="true"/>
+    <geom type="plane" size="0 0 .01" material="motphys-ground"/>
+
+    <geom type="mesh" rgba="0.25098 0.25098 0.25098 1" mesh="base_link" class="visual"/>
+    <body name="Link1" pos="0 0 0.1">
+      <inertial pos="0.00022014 -7.0626e-06 -0.10379" quat="0.998051 -0.0622621 0.00360518 0.00215072" mass="0.98482" diaginertia="0.00658905 0.00502396 0.00428069"/>
+      <joint name="Joint1" pos="0 0 0" axis="0 0 1" range="-2.96706 2.96706" actuatorfrcrange="-300 300"/>
+      <geom type="mesh" rgba="1 0.69804 0 1" mesh="Link1" class="visual"/>
+      <body name="Link2" quat="0.5 -0.5 -0.5 -0.5">
+        <inertial pos="0.093605 -0.011533 0.010727" quat="0.490047 0.523104 0.543931 0.436298" mass="1.1745" diaginertia="0.0163844 0.0143076 0.00562255"/>
+        <joint name="Joint2" pos="0 0 0" axis="0 0 1" range="-1.91986 2.0944" actuatorfrcrange="-300 300"/>
+        <geom type="mesh" rgba="1 0.69804 0 1" mesh="Link2" class="visual"/>
+        <body name="Link3" pos="0.26 0 0" quat="0.707107 0 0 0.707107">
+          <inertial pos="0.0012743 0.0012257 0.016465" quat="0.449628 -0.144988 -0.276019 0.837034" mass="0.44924" diaginertia="0.0014142 0.00119048 0.00116662"/>
+          <joint name="Joint3" pos="0 0 0" axis="0 0 1" range="-1.88496 2.6529" actuatorfrcrange="-300 300"/>
+          <geom type="mesh" rgba="1 0.69804 0 1" mesh="Link3" class="visual"/>
+          <body name="Link4" pos="-0.021 -0.2995 0" quat="0.707107 0.707107 0 0">
+            <inertial pos="-0.001146 -0.00073967 -0.13576" quat="0.999984 0.000512404 0.000118537 0.00557572" mass="0.52995" diaginertia="0.00482651 0.0047764 0.000898226"/>
+            <joint name="Joint4" pos="0 0 0" axis="0 0 1" range="-3.49066 3.49066" actuatorfrcrange="-300 300"/>
+            <geom type="mesh" rgba="1 0.69804 0 1" mesh="Link4" class="visual"/>
+            <body name="Link5" quat="0.707107 -0.707107 0 0">
+              <inertial pos="1.2093e-06 -0.013401 0.0058598" quat="0.459225 0.53864 -0.53747 0.458372" mass="0.24301" diaginertia="0.000294721 0.00025665 0.000171719"/>
+              <joint name="Joint5" pos="0 0 0" axis="0 0 1" range="-2.05949 2.05949" actuatorfrcrange="-300 300"/>
+              <geom type="mesh" rgba="1 0.69804 0 1" mesh="Link5" class="visual"/>
+              <body name="Link6" pos="0 -0.0685 0" quat="0.707107 0.707107 0 0">
+                <inertial pos="-5.74917e-05 0 0.11545" quat="1 0 0.000720664 0" mass="0.223253" diaginertia="0.0211302 0.0211301 0.0200061"/>
+                <joint name="Joint6" pos="0 0 0" axis="0 0 1" range="-6.10865 6.10865" actuatorfrcrange="-300 300"/>
+                <geom type="mesh" rgba="0.25098 0.25098 0.25098 1" mesh="Link6" class="visual"/>
+                <geom size="0.01 0.07" pos="0 0 0.07" type="cylinder" rgba="0.2 0.2 0.2 1"/>
+                <geom name="blocker" size="0.05 0.065 0.0035" pos="0.0005 0 0.19" quat="0.707107 0 -0.707107 0" type="box" rgba="1 0.423529 0.0392157 1"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    
+    <body name="ball_link" pos="0 0 0.07">
+      <freejoint/>
+      <inertial pos="0 0 0" mass="0.0027" diaginertia="1 1 1"/>
+      <geom size="0.019" contype="1" rgba="0 1 0 1" solref="1 0"/>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <position name="act1" joint="Joint1" />
+    <position name="act2" joint="Joint2" />
+    <position name="act3" joint="Joint3" />
+    <position name="act4" joint="Joint4" />
+    <position name="act5" joint="Joint5" />
+    <position name="act6" joint="Joint6" />
+  </actuator>
+</mujoco>
