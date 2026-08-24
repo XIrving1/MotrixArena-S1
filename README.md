@@ -25,11 +25,6 @@ uv sync
 ```bash
 uv run tensorboard --logdir artifacts/tensorboard
 ```
-
-## 归档说明
-
-本仓库仅保留工程文件和结果产物；个人总结、过程记录、完整训练运行目录、虚拟环境及缓存未纳入版本管理。
-
 ## License
 
 遵循仓库中的 `LICENSE` 与 `NOTICE`。
